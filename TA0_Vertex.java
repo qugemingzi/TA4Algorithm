@@ -3,6 +3,7 @@ package ceshi;
 import java.util.ArrayList;
 
 public class TA0_Vertex {
+	// 无向图点类
 	private String name = null;
     private int d = 0;
     private int f = 0;
