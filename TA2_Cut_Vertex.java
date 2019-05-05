@@ -9,7 +9,7 @@ public class TA2_Cut_Vertex {
 
 	public static void main(String[] args) {
 		// 目标：无向图中的割点
-		// 想法：DFS中加入dfn(d值)，low值
+		// 想法：DFS中加入dfn值(d值)，low值
 		// dfn表示在DFS回溯的前提下，该结点被遍历的时间先后顺序，也就是时间戳，顺序递增
 		// low表示该结点不通过父亲到这条边所能连通的顶点时间戳的最小值。初始值为dfn。
 		System.out.println("新建点集！");
