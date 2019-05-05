@@ -6,6 +6,7 @@ import java.util.List;
 
 public class TA2_Cut_Vertex {
 	static int time;
+	static int children = 0;
 
 	public static void main(String[] args) {
 		// 目标：无向图中的割点
@@ -80,6 +81,9 @@ public class TA2_Cut_Vertex {
         	if(v.getColor() == "GRAY" && !u.getPi().equals(v)){
         		u.setLow(Math.min(u.getLow(), v.getDfn()));
         	}
+        	if(u.getPi() == null){
+        		children++;
+        	}
     	}
     	u.setColor("BLACK");
     }
@@ -88,7 +92,10 @@ public class TA2_Cut_Vertex {
 		System.out.println("打印割点");
 		for(TA0_Vertex u: list){
 			for(TA0_Vertex v: u.getEdge()){
-				if(v.getLow() >= u.getDfn()){
+				if(v.getLow() >= u.getDfn() && u.getPi() != null){
+					System.out.println("顶点" + u.getName() + "为割点");
+					break;
+				}else if(u.getPi() == null && children > 1){
 					System.out.println("顶点" + u.getName() + "为割点");
 					break;
 				}
