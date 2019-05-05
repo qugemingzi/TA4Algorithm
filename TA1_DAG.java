@@ -8,6 +8,7 @@ public class TA1_DAG {
 	static int time;
 	
     public static void main(String args[]){
+    	// DG2DAG
     	// 目标：将有向图删除某些边成为有向无环图
     	// 想法：DFS将返回边删除，遍历到时颜色为“灰色”
         System.out.println("新建点集！");
