@@ -33,6 +33,7 @@ public class TA4_negcircle {
             Pi[u][v] = u;
             m--;
         }
+        scan.close();
         System.out.println("k = 0");
         print();
     }
